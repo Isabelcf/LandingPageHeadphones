@@ -1,0 +1,58 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;&display=swap');
+
+/*VARIABLES CSS*/
+
+/* O seletor CSS :root serve para acessar o elemento raiz do documento, ou seja, define o escopo global da variável, tornando-a acessível em todo o documento HTML. 
+
+Para declarar variáveis no CSS, deve-se:
+1- Usar o seletor :root{}
+2- Iniciar a declaração das variáveis com --
+3- Atribuir um valor */
+:root {
+    /* Altura do cabeçalho, usada para definir uma altura consistente para cabeçalhos */
+    --header-height: 3rem;
+
+    /* CORES */
+    --hue-color: 206; /* Define o tom base para a paleta de cores (usado nas variáveis HSL) */
+    --black-color: hsl(var(--hue-color), 4%, 4%); /* Cor principal preta com baixa saturação e brilho */
+    --black-color-alt: hsl(var(--hue-color), 4%, 8%); /* Variante da cor preta, um pouco mais clara */
+    --title-color: hsl(var(--hue-color), 4%, 95%); /* Cor do título, quase branca, para contraste em fundos escuros */
+    --text-color: hsl(var(--hue-color), 4%, 75%); /* Cor do texto padrão, cinza claro */
+    --text-color-light: hsl(var(--hue-color), 4%, 65%); /* Versão mais clara do texto, para subtítulos ou legendas */
+    --white-color: #FFF; /* Cor branca pura */
+    --body-color: hsl(var(--hue-color), 4%, 6%); /* Cor de fundo principal do corpo, quase preta */
+    --container-color: hsl(var(--hue-color), 4%, 10%); /* Cor de fundo dos contêineres, ligeiramente mais clara que o fundo */
+    --text-gradient: linear-gradient(hsl(var(--hue-color), 4%, 24%), hsl(var(--hue-color), 4%, 8%)); /* Gradiente para o texto, indo de cinza médio a preto */
+    --scroll-thumb-color: hsl(var(--hue-color), 4%, 16%); /* Cor da barra de rolagem */
+    --scroll-thumb-color-alt: hsl(var(--hue-color), 4%, 20%); /* Variante um pouco mais clara para estados alternativos de rolagem */
+
+    /* FONTES E TIPOGRAFIA */
+    --body-font: 'Poppins', serif; /* Fonte principal usada no corpo do documento */
+    --biggest-font-size: 5rem; /* Tamanho da maior fonte, geralmente usada para cabeçalhos principais */
+    --bigger-font-size: 3.5rem; /* Tamanho de fonte grande para subtítulos ou seções */
+    --big-font-size: 2.5rem; /* Fonte de tamanho médio-grande */
+    --h2-font-size: 1.25rem; /* Tamanho da fonte para o subtítulo H2 */
+    --h3-font-size: 1.125rem; /* Tamanho da fonte para o subtítulo H3 */
+    --normal-font-size: .938rem; /* Tamanho de fonte padrão para o corpo do texto */
+    --small-font-size: .813rem; /* Fonte de tamanho pequeno, ideal para rodapés e anotações */
+    --smaller-font-size: 75rem; /* Tamanho da fonte menor para detalhes ou textos secundários */
+    --text-line-height: 2rem; /* Altura da linha para espaçamento vertical entre linhas de texto */
+
+    /* PESO DA FONTE */
+    --font-medium: 500; /* Peso de fonte médio */
+    --font-semi-bold: 600; /* Peso de fonte seminegrito */
+
+    /* MARGENS INFERIORES */
+    --mb-0-5: .5rem; /* Margem inferior de 0,5rem */
+    --mb-0-75: .75rem; /* Margem inferior de 0,75rem */
+    --mb-1: 1rem; /* Margem inferior de 1rem */
+    --mb-1-5: 1.5rem; /* Margem inferior de 1,5rem */
+    --mb-2: 2rem; /* Margem inferior de 2rem */
+    --mb2-5: 2.5rem; /* Margem inferior de 2,5rem */
+
+    /* NÍVEIS DE Z-INDEX */
+    --z-tooltip: 10; /* Z-index para tooltips, garantindo que fiquem sobrepostos a outros elementos */
+    --z-fixed: 100; /* Z-index alto para elementos fixos como cabeçalhos fixos */
+}
+
