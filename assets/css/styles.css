@@ -56,9 +56,11 @@ Para declarar variáveis no CSS, deve-se:
     --z-fixed: 100; /* Z-index alto para elementos fixos como cabeçalhos fixos */
 }
 
-  /* RESPOSIVE TYPOGRAPHY */
+ /* RESPONSIVE TYPOGRAPHY */
+/* Aplica regras de tipografia quando a largura da tela for maior ou igual a 968px */
 @media screen and (min-width: 968px) {
     :root{
+        /* Define variáveis CSS para tamanhos de fonte responsivos */
         --biggest-font-size: 7.5rem;
         --bigger-font-size: 4.5rem;
         --big-font-size: 4rem;
@@ -67,88 +69,102 @@ Para declarar variáveis no CSS, deve-se:
         --normal-font-size: 1rem;
         --small-font-size: .875rem;
         --smaller-font-size: .813rem;
-
     }
 }
 
 /* BASE */
+/* Aplica um modelo de caixa padrão, removendo espaçamentos padrão */
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+/* Habilita a rolagem suave ao navegar pela página */
 html{
     scroll-behavior: smooth;
 }
 
+/* Define estilos básicos para o corpo da página */
 body{
-    margin: var(--header-height) 0 0 0;
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-    background-color: var(--body-color);
-    color: var(--text-color);
+    margin: var(--header-height) 0 0 0; /* Adiciona margem no topo com base na altura do cabeçalho */
+    font-family: var(--body-font); /* Usa a fonte definida na variável CSS */
+    font-size: var(--normal-font-size); /* Define o tamanho do texto padrão */
+    background-color: var(--body-color); /* Define a cor de fundo da página */
+    color: var(--text-color); /* Define a cor do texto principal */
 }
 
-h1,h2,h3{
+/* Define a cor dos títulos h1, h2 e h3 */
+h1, h2, h3{
     color: var(--title-color);
 }
 
+/* Remove os estilos padrão das listas, tornando-as sem marcadores */
 ul{
     list-style: none;
 }
 
+/* Remove a decoração de links */
 a{
     text-decoration: none;
 }
 
+/* Remove as bordas e contornos padrão de botões e inputs */
 button, input{
     border: none;
     outline: none;
 }
 
+/* Define o cursor como ponteiro ao passar sobre botões */
 button{
     cursor: pointer;
 }
 
+/* Garante que imagens não ultrapassem o tamanho do contêiner */
 img{
     max-width: 100%;
     height: auto;
 }
 
 
-
 /* REUSABLE CSS CLASSES */
+/* Define espaçamento padrão para seções */
 .section{
     padding: 4rem 0 2rem;
 }
 
+/* Define o estilo do título da seção */
 .section__title{
-    font-size: var(--bigger-font-size);
-    text-align: center;
-    margin-bottom: var(--mb-2-5);
+    font-size: var(--bigger-font-size); /* Usa a variável CSS para tamanho do título */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: var(--mb-2-5); /* Define margem inferior */
 }
 
+/* Aplica um gradiente ao título da seção */
 .section__title-gradient{
-    background: var(--text-gradient);
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
+    background: var(--text-gradient); /* Define um fundo com gradiente */
+    color: transparent; /* Torna a cor do texto transparente */
+    -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto no WebKit */
+    background-clip: text; /* Aplica o gradiente apenas ao texto */
 }
+
 
 /* LAYOUT */
+/* Esconde o overflow da página, útil para animações e imagens */
 .main{
-    overflow: hidden; /*For animation and images*/
+    overflow: hidden; /* Evita que elementos animados causem barras de rolagem */
 }
 
+/* Define a largura máxima do conteúdo e centraliza horizontalmente */
 .container{
-    max-width: 968px;
-    margin-left: var(--mb-1-5);
-    margin-right: var(--mb-1-5);
+    max-width: 968px; /* Define a largura máxima */
+    margin-left: var(--mb-1-5); /* Margem à esquerda */
+    margin-right: var(--mb-1-5); /* Margem à direita */
 }
 
+/* Define uma estrutura de grade para elementos */
 .grid{
-    display: grid;
+    display: grid; /* Ativa o layout de grade */
 }
 
 /* HEADER */
